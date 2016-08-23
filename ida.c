@@ -5,7 +5,7 @@
 #include "graph.h"
 #include "heuristic.h"
 
-inline int
+int
 IDA(node *current, float thold, float *tmp_thold, long int *gen_node, long int *exp_node) {
 	int i;
 	int actions[MAXACTIONS];
