@@ -4,7 +4,7 @@
 #include "heuristic.h"
 
 /*last move heuristic function*/
-inline int findHeuristic(int state[]) {
+int findHeuristic(int state[]) {
 	int i;
 	int h = 0;
 	int one_tile_x, four_tile_y;
