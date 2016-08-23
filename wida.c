@@ -5,7 +5,7 @@
 #include "graph.h"
 #include "heuristic.h"
 
-inline int 
+int 
 IDA(node *current, float thold, float *tmp_thold, long int *gen_node, long int *exp_node) {
 	int i;
 	int actions[MAXACTIONS];
@@ -45,7 +45,7 @@ IDA(node *current, float thold, float *tmp_thold, long int *gen_node, long int *
 	return result;
 }
 
-inline solution_t
+solution_t
 idaSearch(node *initial) {
 	solution_t soln;
 	int i = 0;
