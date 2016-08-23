@@ -6,7 +6,7 @@
 #include "heuristic.h"
 
 
-inline FILE*
+FILE*
 safeOpen(char *fname, const char *mode) {
 	FILE *fp;
 	if ((fp = fopen(fname, mode)) == NULL) {
@@ -17,7 +17,7 @@ safeOpen(char *fname, const char *mode) {
 }
 
 
-inline void
+void
 initialize(FILE* inputFile, node* initial) {
 	int i = 0;
 
@@ -31,7 +31,7 @@ initialize(FILE* inputFile, node* initial) {
 }
 
 
-inline void
+void
 printSoln(node *initial, solution_t *soln, double time_spend) {
 	int i, j;
 	printf("Initial State:\n");
