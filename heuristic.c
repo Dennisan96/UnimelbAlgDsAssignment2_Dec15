@@ -4,7 +4,7 @@
 #include "heuristic.h"
 
 /*heuristic using sum of Manhattan Distance*/
-inline int 
+int 
 findHeuristic(int state[]) {
 	int i;
 	int h = 0;
