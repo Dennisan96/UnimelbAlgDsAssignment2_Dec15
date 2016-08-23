@@ -5,7 +5,7 @@
 #include "io.h"
 #include "ida.h"
 
-inline coordinate_t
+coordinate_t
 findCoordinate(int index) {
 	coordinate_t c;
 
@@ -14,7 +14,7 @@ findCoordinate(int index) {
 	return c;
 }
 
-inline int 
+int 
 findManhattanDistance(coordinate_t* initial, coordinate_t* final) {
 	return (abs(initial->x - final->x) + abs(initial->y - final->y));
 }
@@ -24,7 +24,7 @@ findManhattanDistance(coordinate_t* initial, coordinate_t* final) {
    pass into an array of actions, "0" represent up, "1" represent left
    "2" represent down, "3" represent right.
 */
-inline int
+int
 findPossibleActions(int state[], int actions[], int *blank) {
 	int i = 0;
 	coordinate_t c_blank;
@@ -55,7 +55,7 @@ findPossibleActions(int state[], int actions[], int *blank) {
 }
 
 
-inline int
+int
 findBlank(int state[]) {
 	int i=0;
 	while (state[i]!= 0) {
@@ -65,7 +65,7 @@ findBlank(int state[]) {
 }
 
 
-inline void
+void
 applyAction(int action, int state[], int blank) {
 	if (action == UP) {
 		cellSwap(CURRENT_CELL, UPPER_CELL);
@@ -84,7 +84,7 @@ applyAction(int action, int state[], int blank) {
 
 
 
-inline void
+void
 copyState(int original[], int copyed[]) {
 	int i;
 	for (i=0; i<MAXSIZE; i++) {
@@ -93,23 +93,23 @@ copyState(int original[], int copyed[]) {
 	return;
 }
 
-inline int 
+int 
 isMoveBack(int last_action, int current_action) {
 	return (last_action + current_action == MOVE_BACK);
 }
 
 
-inline int 
+int 
 cost(int action, int state[]) {
 	return 1;
 }
 
-inline solution_t
+solution_t
 graphSearch(node* initial) {
 	return idaSearch(initial);
 }
 
-inline void
+void
 cellSwap(int *a, int *b) {
 	int tmp;
 	tmp = *a;
@@ -118,7 +118,7 @@ cellSwap(int *a, int *b) {
 	return;
 }
 
-inline float 
+float 
 findMinThold(float a, float b) {
 	if (a < b) {
 		return a;
