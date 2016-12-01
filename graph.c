@@ -112,6 +112,7 @@ graphSearch(node* initial) {
 void
 cellSwap(int *a, int *b) {
 	int tmp;
+	int tmp2 = 0;
 	tmp = *a;
 	*a = *b;
 	*b = tmp;
